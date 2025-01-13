@@ -1,6 +1,8 @@
 # ProductBox-Flutter-Test
 
-This repository contains Flutter test designed to assess the proficiency of new applicants. The tests cover key areas such as state management, UI design, API integration, and best practices for Flutter development. Applicants are required to build a movie browsing application that integrates with an external API and Firebase for data storage and management.
+This repository contains a Flutter test designed to assess the proficiency of new applicants. The tests cover key areas such as state management, UI design, API integration, and best practices for Flutter development. Applicants are required to build a movie browsing application that integrates with an external API and Firebase for data storage and management.
+
+---
 
 ## Test Overview
 
@@ -21,31 +23,32 @@ Create a Flutter app for a movie browsing application with the following functio
 ### Firebase Setup
 
 - **Firebase Firestore**: Use Firebase Firestore to save and retrieve the list of favorite movies.
-- **Firebase Authentication**: No need to implement authentication add favorites in collection with auto-generated firebase doc-id.
-  
+- **Firebase Authentication**: Firebase Authentication is not required. You can store favorites in a collection with auto-generated Firebase document IDs.
+
 ### API Integration
 
 - **API Documentation**: You will be using the [TheMovieDB API](https://developer.themoviedb.org/reference) for fetching movie data. Please refer to the documentation for available endpoints.
   
 - **Access Tokens**:
+  - Create a free account on [TheMovieDB](https://www.themoviedb.org/) and get the following token and key from [API settings](https://www.themoviedb.org/settings/api):
     - **READ ACCESS TOKEN**:  
-      `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OWJiNmZmNDdiMzg3N2M2ZDU5MDJhNGZjNGFlMjIzNiIsIm5iZiI6MTczNjczODI5Mi44NjcsInN1YiI6IjY3ODQ4NWY0YzgxYWNhYTYzZGJiZjFkOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HNUPFo0e6aeSoTmeiULQmb4-Wd8Hv7_2fpRAXXT6Xt4`
     - **API KEY**:  
-      `99bb6ff47b3877c6d5902a4fc4ae2236`
-  
+
 ---
 
 ## Functional Requirements
 
 ### 1. Movie List
-- Fetch a list of movies using the provided API and display them in a scrollable list using this api /discover/movie?api_key={{apiKey}}.
+- Fetch a list of movies using the provided API and display them in a scrollable list using the API endpoint:
+  - `/discover/movie?api_key={{apiKey}}`
 - Implement pagination to load more movies when the user scrolls to the bottom of the list.
 
 ### 2. Movie Details
-- When a movie is clicked, navigate to a detailed view showing additional information using this api /movie/939243?api_key={{api_key}}&language=en-US.
+- When a movie is clicked, navigate to a detailed view showing additional information using the API endpoint:
+  - `/movie/{movieId}?api_key={{api_key}}&language=en-US`
 
 ### 3. Search Functionality
-- Implement a search bar to filter movies by name, this should be done on the frontend using array logics.
+- Implement a search bar to filter movies by name. This should be done on the frontend using array logic.
 
 ### 4. Favorites Management
 - Allow users to mark/unmark movies as favorites.
@@ -77,7 +80,7 @@ Create a Flutter app for a movie browsing application with the following functio
 - Use **Cubit** or **BLoC** to manage states for fetching movies, handling favorites, and managing theme settings.
 
 ### 2. Widget Reusability
-- Break down the UI into reusable widgets like:
+- Break down the UI into reusable widgets such as:
   - `MovieCard`
   - `SearchBar`
   - `FavoriteButton`
