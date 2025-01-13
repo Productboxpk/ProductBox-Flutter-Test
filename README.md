@@ -103,7 +103,7 @@ Create a Flutter app for a movie browsing application with the following functio
 
 - Use models for both Firebase and API data to ensure clean code and maintainable architecture.
 - Ensure that the app handles edge cases such as empty responses, errors, and network issues gracefully.
-- Make sure the app is responsive and works well on both phones and tablets.
+- Make sure the app is responsive and works well on different dimension phones.
 
 ---
 
