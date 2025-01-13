@@ -6,7 +6,7 @@ This repository contains Flutter test designed to assess the proficiency of new 
 
 Create a Flutter app for a movie browsing application with the following functionalities:
 
-1. **Movie List**: Fetch and display a list of movies in a scrollable list, with pagination support using this api /discover/movie?api_key={{apiKey}}.
+1. **Movie List**: Fetch and display a list of movies in a scrollable list, with pagination support.
 2. **Movie Details**: Display additional movie information when a movie is clicked.
 3. **Favorites Management**: Allow users to mark/unmark movies as favorites and save this information in Firebase.
 4. **Favorites Screen**: Display the list of favorite movies stored in Firebase.
@@ -38,7 +38,7 @@ Create a Flutter app for a movie browsing application with the following functio
 ## Functional Requirements
 
 ### 1. Movie List
-- Fetch a list of movies using the provided API and display them in a scrollable list.
+- Fetch a list of movies using the provided API and display them in a scrollable list using this api /discover/movie?api_key={{apiKey}}.
 - Implement pagination to load more movies when the user scrolls to the bottom of the list.
 
 ### 2. Movie Details
